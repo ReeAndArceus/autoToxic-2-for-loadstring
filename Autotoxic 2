@@ -1,0 +1,79 @@
+local choosePlayer = false --set true if you want to insult one person only 
+
+local chosenPlayer = "" --if chosePlayer = true, type playername in quotes 
+
+local Taunts = { --add as many as you wish 
+
+"You're bad at the game.", 
+
+"Imagine Crying.", 
+
+"L.", 
+
+"L bozo.", 
+
+"Imagine been that ban.", 
+
+"You're salf is enough for season my food.", 
+
+"How a person can be that bad like you.", 
+
+"Sub to Ree.", 
+
+"Bozo Crying?.", 
+
+"You make the whole squad laughing at you.", 
+
+"Sub to Ree.", 
+
+"You fell off No one cares.", 
+
+"You are the waste of earth.", 
+
+"No one likes you.", 
+
+"Even dogs are better than you.", 
+
+"Sub to Ree.", 
+
+"Ugly fat noob.", 
+
+"I feel bad for your mom and dad.", 
+
+"Your Salt Is Enough to Season My Food.", 
+
+"Sub to JN HH Gaming.", 
+
+"If You Replying Me You are so Stupid Because It is System To Insult Stupids Like you.", 
+
+"Imagine Being Bad.", 
+
+"Imagine Crying.", 
+
+"I am Better than Kreek and TanqR.", 
+
+"Sub To Re.", "Aw Man You Again.", } 
+
+local Remote = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest 
+
+local function Insult() 
+
+local players = game.Players:GetChildren() 
+
+local howManyPlayers = #players 
+
+local ran = math.random(1,howManyPlayers) 
+
+local chosenOne = players[ran] 
+
+local chance = math.random(1,20) 
+
+if choosePlayer == true then Remote:FireServer(chosenPlayer.." " ..Taunts[math.random(1,#Taunts)],"All") 
+
+elseif chance <= 5 then Remote:FireServer(chosenOne.Name.." " ..Taunts[math.random(1,#Taunts)],"All") 
+
+else Remote:FireServer(Taunts[math.random(1,#Taunts)],"All") end end 
+
+local randTime = math.random(5,15) 
+
+while true and wait(randTime) do Insult() end
