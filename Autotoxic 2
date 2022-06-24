@@ -52,7 +52,11 @@ local Taunts = { --add as many as you wish
 
 "I am Better than Kreek and TanqR.", 
 
-"Sub To Re.", "Aw Man You Again.", } 
+"Sub To Ree.", 
+
+"Aw Man You Again.", 
+
+"https://discord.gg/xyPZ3WnJrQ",} 
 
 local Remote = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest 
 
